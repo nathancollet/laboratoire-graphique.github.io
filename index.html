@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Le labo graphique Penninghen</title>
+    <link rel="stylesheet" href="webfonts/overpass.css" media="screen, print">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="projects.js"></script>
+  </head>
+  <body>
+    <div id="page">
+
+      <h1 id="labo">—<br>Le labo<br>graphique<br>Penninghen<br>—</h1>
+
+      <div id="description">
+        <p>
+          Entre mars 2015 et mars 2016, le laboratoire graphique de l’<a href="#">ESAG Penninghen</a> a proposé aux élèves de DA4 et DA5 de développer une pensée pour libérer leur création graphique à l'heure des réseaux et des données.
+        </p>
+        <p>
+          3 trimestres pour aborder 3 sujets : opportunités et limites des outils pour la création, documentation d’une démarche créative, démarche d’auteur et élaboration d'un projet professionnel.
+      </p>
+      <p>
+        <span id="nbr_prjts"></span> projets qui abordent le transmédia, l'édition print et numérique, la représentation de données, les principes génératifs, le cinéma, la narration, l'interaction et le packaging de pizza : <span id="allProjects"></span>
+      </p>
+      <p>
+        <a href="http://laboratoire-graphique.github.io">laboratoire-graphique.github.io</a>
+      </p>
+    </div>
+
+    <footer>Colophon : Pendant 1 an le laboratoire graphique a été animé par Bernard Baissait, Pierre-Yvon Carnoy et Christophe Salaün. Le laboratoire graphique a reçu les visites et interventions de Aymeric Dutheil, Louis Eveillard et Raphaël Bastide. Le laboratoire graphique est aujourd'hui fermé mais vous pouvez nous contacter à l'adresse <a href="mailto:labo.graphique@penninghen.fr">labo.graphique@penninghen.fr</a>. Site et affiche utilise la webfont open source <a href="http://overpassfont.org/">Overpass</a>. </footer>
+
+
+    <script type="text/javascript">
+
+    var projects = JSON.parse(PROJECTS_FILE);
+
+// fonction pour la création d'un array de 0 à project.length
+    function range(start, end) {
+    var prjct_array = [];
+    for (var i = start; i <= end; i++) {
+      prjct_array.push(i);
+    }
+    return prjct_array;
+    }
+
+    var prjct_array = range(0, (projects.length - 1));
+
+// shuffle l'array précédent
+    function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+    }
+
+    rndm_prjct = (shuffleArray(prjct_array));
+
+    function auteurs(x){
+      if (projects[rndm_prjct[x]].auteur2 == 0) return projects[rndm_prjct[x]].auteur1;
+      else if (projects[rndm_prjct[x]].auteur3 == 0) return projects[rndm_prjct[x]].auteur1 + ", " + projects[rndm_prjct[x]].auteur2;
+      else return projects[rndm_prjct[x]].auteur1 + ", " + projects[rndm_prjct[x]].auteur2 + ", " + projects[rndm_prjct[x]].auteur3;
+
+
+    }
+
+//Appel des 8 projets
+
+    var  x = 0;
+    while (x  <= 7) {
+      y = 'projet-' + (x + 1) + '-txt';
+      z = 'projet-' + (x + 1) + '-img';
+
+
+      document.writeln("<section class='txt' id='" + y + "'><h2>" + projects[rndm_prjct[x]].nom + "</h2><h3>" + auteurs(x) + "</h3><p>" + projects[rndm_prjct[x]].pitch + "</p></section><section class='img' id='" + z + "'><img src='projets/" + projects[rndm_prjct[x]].url + "/1.jpg' alt='" + projects[rndm_prjct[x]].nom + "' /><p>" + projects[rndm_prjct[x]].nom + "</p></section>");
+      x = x + 1;
+      }
+
+      prjts = projects[0].nom;
+      for (var i = 1; i < projects.length; i++) {
+      prjts = prjts + ", " + projects[i].nom;
+      }
+
+      document.getElementById('allProjects').innerHTML = prjts + ".";
+      document.getElementById('nbr_prjts').innerHTML = projects.length;
+
+      </script>
+
+    </div>
+  </body>
+
+  <script type="text/javascript">
+  var  img = 1;
+  while (img  <= 8) {
+    document.getElementById("projet-" + img + "-img").style.top = Math.floor(Math.random() * 1600) + 'px';
+    document.getElementById("projet-" + img + "-img").style.left = Math.floor(Math.random() * 1000) + 'px';
+    document.getElementById("projet-" + img + "-img").style.width = Math.floor(Math.random() * 400) + 100 + 'px';
+    img = img + 1;
+  }
+  var  txt = 1;
+  while (txt  <= 7) {
+    document.getElementById("projet-" + txt + "-txt").style.top = Math.floor(Math.random() * 700) + 'px';
+    document.getElementById("projet-" + (txt + 1) + "-txt").style.bottom = Math.floor(Math.random() * 700) + 'px';
+    txt = txt + 2;
+  }
+  </script>
+
+</html>
