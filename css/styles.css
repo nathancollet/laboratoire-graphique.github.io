@@ -1,5 +1,5 @@
 *{margin: 0; padding: 0;}
-body{font-family: 'Overpass', sans-serif; font-size: 12px; line-height: 18px; width: 1360px; font-weight: 400; margin: 0 auto;}
+body{font-family: 'Overpass', sans-serif; font-size: 12px; line-height: 18px; position: relative; font-weight: 400;}
 h1, h2, h3, p{margin-bottom: 5px;}
 ul{list-style-type: none;}
 p{margin-bottom: 10px;}
@@ -29,7 +29,7 @@ section.txt{z-index: 1000; background-color: white; width: 220px; display: block
 @media screen {
   #page{position: relative; overflow: hidden;
       width: 1360px; height: 1923px;
-      overflow: hidden; }
+      border: 1px dotted black; overflow: hidden; }
 
 }
 
