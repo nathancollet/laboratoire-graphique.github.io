@@ -83,7 +83,7 @@
       x = x + 1;
       }
 
-      prjts = projects[0].nom;
+      prjts = "<a href=" + projects[0].url + ">" + projects[0].nom + "</a>";
       for (var i = 1; i < projects.length; i++) {
       prjts = prjts + ", <a href=" + projects[i].url + ">" + projects[i].nom + "</a>";
       }
