@@ -79,13 +79,13 @@
       z = 'projet-' + (x + 1) + '-img';
 
 
-      document.writeln("<section class='txt' id='" + y + "'><h2>" + projects[rndm_prjct[x]].nom + "</h2><h3>" + auteurs(x) + "</h3><p>" + projects[rndm_prjct[x]].pitch + "</p></section><section class='img' id='" + z + "'><img src='projets/" + projects[rndm_prjct[x]].url + "/1.jpg' alt='" + projects[rndm_prjct[x]].nom + "' /><p>" + projects[rndm_prjct[x]].nom + "</p></section>");
+      document.writeln("<section class='txt' id='" + y + "'><h2>" + projects[rndm_prjct[x]].nom + "</h2><h3>" + auteurs(x) + "</h3><p>" + projects[rndm_prjct[x]].pitch + "</p></section><section class='img' id='" + z + "'><img src='projets/" + projects[rndm_prjct[x]].dossier + "/1.jpg' alt='" + projects[rndm_prjct[x]].nom + "' /><p>" + projects[rndm_prjct[x]].nom + "</p></section>");
       x = x + 1;
       }
 
       prjts = projects[0].nom;
       for (var i = 1; i < projects.length; i++) {
-      prjts = prjts + ", " + projects[i].nom;
+      prjts = prjts + ", <a href=" + projects[i].url + ">" + projects[i].nom + "</a>";
       }
 
       document.getElementById('allProjects').innerHTML = prjts + ".";
