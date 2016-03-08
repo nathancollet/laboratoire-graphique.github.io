@@ -28,7 +28,7 @@ section.txt{z-index: 1000; background-color: white; width: 220px; display: block
 
 @media screen {
   #page{position: relative; overflow: hidden;
-      width: 1360px; height: 1923px;
+      width: 1360px; height: 1913px;
       /*border: 1px dotted black;*/
       overflow: hidden; }
 
@@ -40,5 +40,5 @@ section.txt{z-index: 1000; background-color: white; width: 220px; display: block
     size: A4;
     /* Quel format pour le traceur? */
   }
-  #page{position: relative; overflow: hidden; width: 1360px; height: 1923px; border: 1px dotted black; overflow: hidden;}
+  #page{position: relative; overflow: hidden; width: 1360px; height: 1913px; border: 1px dotted black; overflow: hidden;}
 }
