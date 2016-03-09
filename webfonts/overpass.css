@@ -95,3 +95,26 @@
     font-weight: 300;
     text-rendering: optimizeLegibility;
 }
+
+/* Webfont: Mono */@font-face {
+    font-family: 'mono';
+    src: url('webfonts/whois-mono.eot');
+    src: url('webfonts/whois-mono.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/whois-mono.woff') format('woff'),
+         url('webfonts/whois-mono.ttf') format('truetype'),
+         url('webfonts/whois-mono.svg#whoismono') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Webfont: Inknut */@font-face {
+    font-family: 'antikbold';
+    src: url('InknutAntiqua-Bold.eot');
+    src: url('InknutAntiqua-Bold.eot?#iefix') format('embedded-opentype'),
+         url('InknutAntiqua-Bold.woff') format('woff'),
+         url('InknutAntiqua-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
