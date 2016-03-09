@@ -16,7 +16,7 @@ section{position: absolute;}
 
 section img{width: 100%; }
 section.img{z-index: -1000; background-color: none;}
-section.txt{z-index: 1000; background-color: white; width: 220px; display: block;}
+section.txt{z-index: 1000; background-color: white; width: 214px; display: block; padding: 3px;}
 #projet-1-txt{left: 20px;}
 #projet-2-txt{left: 20px;}
 #projet-3-txt{left: 240px;}
