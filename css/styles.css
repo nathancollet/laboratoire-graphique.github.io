@@ -7,11 +7,11 @@ p{margin-bottom: 10px;}
 a{text-decoration: none;}
 
 h1{ top:20px; text-transform: uppercase; font-size: 66px; line-height: 66px; position: absolute; left: 680px;}
-#description{position: absolute; font-size: 1.6em; line-height: 1.4em; background-color: white; width: 440px; left: 680px; top: 360px; }
-footer{font-size: 1.6em; line-height: 1.4em; position: absolute; left: 680px; bottom: 20px; background-color: white; width: 440px; }
+#description{position: absolute; font-size: 1.8em; line-height: 1.4em; background-color: white; width: 440px; left: 680px; top: 360px; font-family: "Overpass", sans-serif; font-weight: 700;}
+footer{font-size: 1.2em; line-height: 1.4em; position: absolute; left: 680px; bottom: 20px; background-color: white; width: 440px; font-family: "Overpass", sans-serif; font-weight: 700;}
 
 h2{font-weight: 700; font-size: 24px; line-height: 24px;}
-h3{font-weight: 700;}
+h3{font-weight: 700; font-size: 1.2em; line-height: 1.2em;}
 section{position: absolute;}
 
 section img{width: 100%; }

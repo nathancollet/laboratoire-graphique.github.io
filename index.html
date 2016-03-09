@@ -25,14 +25,13 @@
           3 trimestres pour aborder 3 sujets : opportunités et limites des outils pour la création, documentation d’une démarche créative, démarche d’auteur et élaboration d'un projet professionnel.
       </p>
       <p>
-        <span id="nbr_prjts"></span> projets qui abordent le transmédia, l'édition print et numérique, la représentation de données, les principes génératifs, le cinéma, la narration, l'interaction et le packaging de pizza : <span id="allProjects"></span>
+        <span id="nbr_prjts"></span> projets qui abordent le transmédia, l'édition print et numérique, la représentation de données, les principes génératifs, le cinéma, la narration, l'interaction et le packaging : <span id="allProjects"></span>
       </p>
       <p>
-        <a href="http://laboratoire-graphique.github.io">laboratoire-graphique.github.io</a><br>
-        <a href="https://github.com/laboratoire-graphique/laboratoire-graphique.github.io">github.com/laboratoire-graphique/laboratoire-graphique.github.io</a>
+        <a href="http://laboratoire-graphique.github.io">laboratoire-graphique.github.io</a>
       </p>
     </div>
-    <footer>Pendant 1 an le laboratoire graphique a été animé par Bernard Baissait, Pierre-Yvon Carnoy et Christophe Salaün. Le laboratoire graphique a reçu les visites et interventions de <a href="http://www.aymericdutheil.fr/">Aymeric Dutheil</a>, <a href="http://louiseveillard.com/">Louis Eveillard</a> et <a href="http://www.raphaelbastide.com/">Raphaël Bastide</a>. Le laboratoire graphique est aujourd'hui fermé mais vous pouvez nous contacter à l'adresse <a href="mailto:laboratoire-graphique@penninghen.fr">laboratoire-graphique@penninghen.fr</a>. Site et affiche utilise la webfont open source <a href="http://overpassfont.org/">Overpass</a>. </footer>
+    <footer>Pendant 1 an, le laboratoire graphique a été animé par Bernard Baissait, Pierre-Yvon Carnoy et Christophe Salaün. Le laboratoire graphique a reçu les visites et interventions de <a href="http://www.aymericdutheil.fr/">Aymeric Dutheil</a>, <a href="http://louiseveillard.com/">Louis Eveillard</a> et <a href="http://www.raphaelbastide.com/">Raphaël Bastide</a>. Le laboratoire graphique est aujourd'hui fermé mais vous pouvez nous contacter à l'adresse <a href="mailto:laboratoire-graphique@penninghen.fr">laboratoire-graphique@penninghen.fr</a>. Fonts: <a href="http://overpassfont.org/">Overpass</a> et Times New Roman. Pour jouer avec le site et l'affiche: <a href="https://github.com/laboratoire-graphique/laboratoire-graphique.github.io">github.com/laboratoire-graphique/laboratoire-graphique.github.io</a></footer>
 
 
     <script type="text/javascript">
@@ -65,8 +64,8 @@
 
     function auteurs(x){
       if (projects[rndm_prjct[x]].auteur2 == 0) return projects[rndm_prjct[x]].auteur1;
-      else if (projects[rndm_prjct[x]].auteur3 == 0) return projects[rndm_prjct[x]].auteur1 + ", " + projects[rndm_prjct[x]].auteur2;
-      else return projects[rndm_prjct[x]].auteur1 + ", " + projects[rndm_prjct[x]].auteur2 + ", " + projects[rndm_prjct[x]].auteur3;
+      else if (projects[rndm_prjct[x]].auteur3 == 0) return projects[rndm_prjct[x]].auteur1 + ",<br>" + projects[rndm_prjct[x]].auteur2;
+      else return projects[rndm_prjct[x]].auteur1 + ",<br>" + projects[rndm_prjct[x]].auteur2 + ",<br>" + projects[rndm_prjct[x]].auteur3;
 
 
     }
@@ -83,9 +82,9 @@
       x = x + 1;
       }
 
-      prjts = "<a href=" + projects[0].url + ">" + projects[0].nom + "</a>";
+      prjts = projects[0].nom;
       for (var i = 1; i < projects.length; i++) {
-      prjts = prjts + ", <a href=" + projects[i].url + ">" + projects[i].nom + "</a>";
+      prjts = prjts + ", " + projects[i].nom;
       }
 
       document.getElementById('allProjects').innerHTML = prjts + ".";
